@@ -23,7 +23,7 @@ interface RecipeContextType {
 const RecipeContext = createContext<RecipeContextType | null>(null);
 
 // Spoonacular API configuration
-const SPOONACULAR_API_KEY = "5b4c9a5d5ec14a52b484f32919c8f1fa";
+const SPOONACULAR_API_KEY = "YOUR_API_KEY";
 const SPOONACULAR_API_URL = "https://api.spoonacular.com/recipes/findByIngredients";
 const SPOONACULAR_RECIPE_INFO_URL = "https://api.spoonacular.com/recipes";
 
