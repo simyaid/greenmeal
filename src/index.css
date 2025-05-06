@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 142 44% 98%;
+    --foreground: 130 15% 15%;
+
+    --card: 142 44% 98%;
+    --card-foreground: 130 15% 15%;
+
+    --popover: 142 44% 98%;
+    --popover-foreground: 130 15% 15%;
+
+    --primary: 142 64% 36%;
+    --primary-foreground: 142 100% 97%;
+
+    --secondary: 35 65% 60%;
+    --secondary-foreground: 35 10% 15%;
+
+    --muted: 135 30% 90%;
+    --muted-foreground: 130 10% 40%;
+
+    --accent: 200 65% 55%;
+    --accent-foreground: 200 10% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 130 20% 86%;
+    --input: 130 20% 86%;
+    --ring: 142 64% 36%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 142 44% 98%;
+    --sidebar-foreground: 130 15% 15%;
+    --sidebar-primary: 142 64% 36%;
+    --sidebar-primary-foreground: 142 100% 97%;
+    --sidebar-accent: 135 30% 90%;
+    --sidebar-accent-foreground: 130 15% 15%;
+    --sidebar-border: 130 20% 86%;
+    --sidebar-ring: 142 64% 36%;
+  }
+
+  .dark {
+    --background: 130 15% 7%;
+    --foreground: 142 40% 90%;
+
+    --card: 130 15% 10%;
+    --card-foreground: 142 40% 90%;
+
+    --popover: 130 15% 7%;
+    --popover-foreground: 142 40% 90%;
+
+    --primary: 142 50% 40%;
+    --primary-foreground: 142 100% 97%;
+
+    --secondary: 35 50% 40%;
+    --secondary-foreground: 35 100% 97%;
+
+    --muted: 135 15% 15%;
+    --muted-foreground: 130 10% 70%;
+
+    --accent: 200 50% 35%;
+    --accent-foreground: 200 100% 97%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 130 20% 20%;
+    --input: 130 20% 20%;
+    --ring: 142 50% 40%;
+    
+    --sidebar-background: 130 15% 10%;
+    --sidebar-foreground: 142 40% 90%;
+    --sidebar-primary: 142 50% 40%;
+    --sidebar-primary-foreground: 142 100% 97%;
+    --sidebar-accent: 135 15% 15%;
+    --sidebar-accent-foreground: 142 40% 90%;
+    --sidebar-border: 130 20% 20%;
+    --sidebar-ring: 142 50% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    min-height: 100vh;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+}
+
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2;
+}
+
+.eco-gradient {
+  @apply bg-gradient-to-br from-eco-green-300 to-eco-blue-400;
+}
